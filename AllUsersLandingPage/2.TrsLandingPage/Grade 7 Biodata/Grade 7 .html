@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>>> Students BioData <<</title>
+    <link rel="shortcut icon" href="./img/schoologo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="Grade 7 .css" />
+    <link rel="shortcut icon" href="./img/phone.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/de1792ac5e.js"></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous">
+</script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title"><b>>> Office Of The Registrar Students Affairs </b></h3>
+          <div class="headtopstyleline" ></div>
+          <p class="text">
+           <b>>></b>Students BioData Portal
+          </p>
+
+        <a href="./img/sideway.png"></a>
+        <a href="./Pdfs/leaving/Abeka's leaving Cert.pdf"></a>
+        <a href="./Pdfs/Slip/Clements Slip.pdf"></a>
+
+          <label for="classSelect" class="title" >Level:</label> 
+          <select id="classSelect" onchange="displayLearners()">
+            <option value="">Select </option>
+            <option value="Gradeseven">Grade 7</option>
+          
+            <!-- Add more classes as needed -->
+          </select>
+          <br> <br>
+
+          <label for="learnerSelect"  class="title" >Select Learner:</label>
+          <select id="learnerSelect" onchange="displayBiodata()"  class="btn" >
+            <!-- Learner options will be populated based on the class selection -->
+          </select>
+           <br><br>
+           <p id="learnerCount"></p> 
+
+<a href="./"></a>
+<a href="./Pdfs/leaving Certificates 2023/Abeka's leaving Cert.pdf"></a>
+<a href="./Pdfs/Online Slip 2023/Clements Slip.pdf"></a>
+<a href="./Pdfs/Placements 2023.pdf"></a>
+          <div class="hidesmall">
+          <h2  id="biodata" >Up Next</h2>
+      
+          <div class="info">
+           
+        
+
+            <div class="information">
+              <a href="./img/phone.png"><input type="submit" value="Home" class="btn"id="btnsforlevels"/></a>
+              <a href="./Grade 5/Grade 5.html"> <input type="submit" value="Grade 4" class="btn"id="btnsforlevels" /></a>
+             <a href="./Grade 6/Grade 6.html" target="_blank"><input type="submit" value="Grade 5" class="btn"id="btnsforlevels"/></a>
+        
+            </div>
+          </div>
+          
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+
+          <form action="index.html" autocomplete="off">
+            <h2  id="biodata" >Learner's Biodata</h2>
+            <div id="learnerBiodata" class="input">
+              <!-- Biodata will be displayed here -->
+            </div>
+            <h3 class="title" ><b>>> Report any Challenge </b></h3> 
+            <div class="input-container">
+              <label for="">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" required />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="" >Message</label>
+              <span>Message</span>
+             <h6>Technical team will respond to your query apon submission</h6>
+            </div>
+            <input type="submit" value="Send" class="btn" id="send" /><br><br>
+          </form>
+
+            <div class="hidebigscreen">
+          <h2  id="biodata" >Up Next</h2>
+      
+          <div class="info">
+    
+            <div class="information">
+              <a href="./img/phone.png"><input type="submit" value="Home" class="btn"id="btnsforlevels"/></a>
+              <a href="./Grade 5/Grade 5.html"> <input type="submit" value="Grade 4" class="btn"id="btnsforlevels" /></a>
+             <a href="./Grade 6/Grade 6.html" target="_blank"><input type="submit" value="Grade 5" class="btn"id="btnsforlevels"/></a>
+            </div>
+          </div>
+          
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+       
+        </div>
+        </div>
+      </div>
+  
+      <img src="./img/sideway.png" alt="" id="reload">
+    </div>
+    <!-- <script src="swal2.js"></script> -->
+    <script src="Grade 7 .js"></script>
+  </body>
+</html>

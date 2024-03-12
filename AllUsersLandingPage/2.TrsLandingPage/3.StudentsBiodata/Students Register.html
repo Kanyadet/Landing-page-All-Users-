@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions ...</title>
+    <link rel="stylesheet" href="Students Register.css">
+    <link rel="stylesheet" href="./css/fontawesome.css" />
+       <!-- Add SweetAlert2 CSS and JavaScript -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+ 
+  
+    <div class="container">
+        
+        <div class="hero">
+            <form name="submit-to-google-sheet" class="form">
+                <p id="title" >Students Biodata & Downloads<br> The Year 2024 <br></b ></p><br><br> <br>
+           <p class="formsectionA"> Section A:<br>Student Information</p>
+          <!-- <img src="./Pdf/slip 2023/Jason james.pdf" > -->
+        
+         
+
+
+          <input type="search" name="" id="search" oninput="onSearch()" placeholder=" 🔍Search....Surname" class="input" onclick="(this)">
+               <div class="sections">
+            
+                       <input type="text" class="input" placeholder="👁️" id="Entry" name="CurentGrade" disabled>
+                   
+                     
+                   <div class="sub">
+                   
+                       <label for=""><i class="fas fa-user"></i> Student  Full Name </label>
+                       <input type="text" class="input" placeholder="" name="StudentFullName" disabled>
+                    </div>
+                    <div class="sub">
+                        <label for=""><i class="fas fa-tools"></i> Gender 💫</label>
+                      <select name="Gender" id="" class="input" disabled>
+                           <option value=""></option>
+                            <option value="Male"><i class="fas fa-person"></i> Male</option>
+                            <option value="Female"><i class="fas fa-person"></i> Female</option>
+                      </select>
+        
+                        </div>
+
+                    <div class="sub">
+                        <label for=""> <i class="fas fa-user"></i> Date of Birth:💫</label>
+                        <input type="text" name="DateOfBirth" id="Phone Number" class="input"  disabled  >
+                        </div>
+                   
+                    
+                    <div class="sub">
+                        <label for=""><i class="fas fa-lock"></i> Student Entry No </label>
+                        <input type="text"  name="EntryNo" class="input"disabled>
+                        </div>
+    
+            <div class="sub">
+                <label for=""><i class="fas fa-lock"></i> Assessment Number:💫</label>
+                <input type="text" name="Assessment Number" id="Assessment Number" class="input" disabled >
+            </div>
+
+            <div class="sub">
+                <label for=""><i class="fas fa-lock"></i> U.P.I Number:💫</label>
+                <input type="text" name="U.P.I" id="UPI Number" class="input"  disabled >
+                </div>
+                <div class="sub">
+                    <label for=""><i class="fas fa-lock"></i> Student Admission No </label>
+                    <input type="text"  name="Admission No" class="input"disabled>
+                    </div>
+            
+                <div class="sub">
+                <label for=""><i class="fas fa-calendar"></i>  Date of Admission  </label>
+                <input type="text" class="input"  name="DateOfAdm" disabled>
+            </div>
+            
+                <div class="sub">
+                <label for=""><i class="fas fa-school"></i>  Admission Class  </label>
+                <input type="text" class="input"  name="Admission Class" disabled>
+            </div>
+
+            <div class="sub">
+                <label for=""><i class="fas fa-school"></i> Current Class:💫</label>
+                <input type="text" name="Level" id="Level" class="input" disabled >
+            </div>
+
+           
+
+                
+            <div class="sub">
+                <label for=""> <i class="fas fa-phone"></i> Phone Number: 💫</label>
+                <input type="tel" name="Phone Number:" class="input"  disabled >
+                </div>
+                <div class="sub">
+                <label for=""> <i class="fas fa-message"></i> Student School Email:👣 </label>
+                <input type="email" name="Official Email:" id="email"  class="input" disabled >
+            </div>
+            <div class="sub">
+                <label for=""><i class="fas fa-user"></i> Class Teacher </label>
+                <select name="🐏 Class Teacher" id="" class="input"  disabled >
+                    <option value=""></option>
+                    <option value="🧑‍⚕️ Mr Oduor Geofrey Onyango">🧑‍⚕️ Mr Oduor Geofrey Onyango</option>
+                    <option value="Mr Allan Tom Onyango">Mr Allan Tom Onyango</option>
+                    
+                </select>
+                
+                </div>
+             
+                    
+                    <div class="sub">
+                        <label for=""><i class="fas fa-user"></i> Parent/Guardian Name:💫</label>
+                        <input type="text" name="Parent/Guardian Name" id="Assessment Number" class="input"  disabled >
+
+                    </div>
+                    
+                    <div class="sub">
+                        <label for=""><i class="fas fa-phone"></i> Parent/Guardian PhoneNumber 💫</label>
+                        <input type="text" name="ParentGuardianPhoneNumber" class="input"  disabled >
+                        
+                    </div>
+                    
+                     <div class="sub">   <link rel="stylesheet" href="css/fontawesome.css" />
+                         <label for=""><i class="fas fa-house"></i> Other Siblings</label>
+                         <textarea name="Siblings" class="input"  disabled ></textarea>
+                         </div>
+                </div>
+                <div class="container02">
+                    <p class="formsectionB">Section B:After Successful Search, <br>Available Dowloads will appear here For ⬇️ ;</p>
+                    <div id="fileDownload1" class="input">Results Slip</div>
+                    <div id="fileDownload2" class="input">Assessment Progress</div>
+                    <div id="fileDownload3" class="input">Behavioural Report</div>
+                
+                </div>
+           
+
+
+                
+                <!-- <div class="resetsendbtns">
+                    <input type="reset" value="Clear form" class="input submit">
+                    <input type="submit" value="Register" class="input submit">
+            </div> -->
+                <p class="forgotten">All rights reserved &copy;2023 <br><a href="./Pdf/2023-KCPE-Timetable-04.05.pdf">Get help</a></p>
+                <div class="or">Credence</div>
+                <div class="input btn" id="Thanks">"@Mr Oduor"</div>
+                  <!-- Table to display registered learners' data -->
+    
+                  <div id="learnerImages" class="mypic"></div> <!-- New div for learner images --> <br>
+
+            </form>
+            
+            
+        </div>
+        
+    </div>
+   
+    <script src="PasswordOff.js"></script> 
+         <script src="app2.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/1.HOIPortalSignIn.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    
+</head>
+<body>
+    <div class="maincontainer">
+    <form class="colorful-form" id="passwordForm" method="POST">
+        <div class="form-group">
+            <img src="./images/schoologo.png" class="logo" alt=""> <br>
+            <label class="form-label" for="password">Kanyadet Comprehensive school <br>Advanced Portal</label>
+            <hr>
+            <b>Authorised Users</b>
+            <a href="../1.Madam AnodeOnlineDocs/MadamAnodeDocs.html"></a>
+            <select name="staff" id="staff">
+                <option value="">select</option>
+                <option value="Md Everlyne Panyako Atieno - HOI">HeadTeacher</option>
+                <option value="Mr Obure Fredrick Ghana - Acting D/HOI">Deputy HeadTeacher</option>
+                <option value="Mr Owuor Jerry Wcyclife">Senior Teacher</option>
+                
+            </select>
+            <br><br>
+            <b>Password</b>
+            <input required="" placeholder="🧑‍⚕️Enter password" class="form-input" type="password" id="password">
+        </div>
+        
+        <!-- Add fields for arithmetic operation -->
+        <div class="form-group">
+            <label class="form-label" for="arithmeticResult" id="maths">Enter the result of: (5 * 3)+10 =</label>
+            <input required="" placeholder="Enter the result" class="form-input" type="number" id="arithmeticResult">
+        </div>
+        
+        <input type="hidden" name="_captcha" value="false">
+        <button class="form-button" type="submit">Submit</button>
+    </form>
+ <a href="./1.Madam AnodeOnlineDocs/MadamAnodeDocs.html"></a>
+    <script>
+        // Sample data array with passwords and corresponding full names
+        const passwordData = [
+            { password: "panyako", fullName: "Md Everlyne Panyako Atieno" },
+            { password: "ghana", fullName: "Ghana" },
+            { password: "23", fullName: "Mr vincent" },
+            { password: "2345", fullName: "Mr Maxwel" },
+            // Add more entries as needed
+        ];
+
+        document.getElementById("passwordForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get the selected staff and entered password and arithmetic result
+            const selectedStaff = document.getElementById("staff").value;
+            const enteredPassword = document.getElementById("password").value;
+            const enteredResult = parseInt(document.getElementById("arithmeticResult").value);
+
+            // Perform the arithmetic operation
+            const correctResult = (5 * 3 + 10);
+
+            // Check if the entered password matches any in the data array
+            const matchedUser = passwordData.find(user => user.password === enteredPassword);
+
+            if (matchedUser && enteredResult === correctResult) {
+                // Display the full name using SweetAlert2
+                Swal.fire({
+                    title: 'Welcome!',
+                    text: `${selectedStaff}!`,
+                    icon: 'success',
+                    timer: 5000, // Set the timer to 5 seconds
+                    showConfirmButton: false, // Hide the "OK" button
+                }).then(() => {
+                    // Programmatically submit the form
+                    document.getElementById("passwordForm").submit();
+
+                    // Alternatively, you can redirect the user using window.location.href
+                    // Based on the selection, redirect to respective pages
+                    switch (selectedStaff) {
+                        case "HeadTeacher":
+                            window.location.href = './1.Madam AnodeOnlineDocs/MadamAnodeDocs.html';
+                            break;
+                        case "Deputy HeadTeacher":
+                            window.location.href = './path/to/Ghana';
+                            break;
+                        case "Senior Teacher":
+                            window.location.href = './KanyadetLanding/index.html';
+                            break;
+                        default:
+                            // Default redirect if no specific case matches
+                            window.location.href = './default/redirect.html';
+                    }
+                });
+            } else {
+                // Display an error message if the password or arithmetic result is incorrect
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Incorrect password or arithmetic result. Please try again.',
+                    icon: 'error',
+                });
+            }
+
+            // Clear the password and arithmetic result inputs after submission
+            document.getElementById("password").value = "";
+            document.getElementById("arithmeticResult").value = "";
+        });
+    </script>
+    <script src="./SavetoGoogle.js"></script>
+</div>
+</body>
+</html>

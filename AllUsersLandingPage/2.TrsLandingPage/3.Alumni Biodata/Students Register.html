@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions ...</title>
+    <link rel="stylesheet" href="Students Register.css">
+       <!-- Add SweetAlert2 CSS and JavaScript -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+ 
+  
+    <div class="container">
+        
+        <div class="hero">
+            <form name="submit-to-google-sheet" class="form">
+                <p id="title" >Kanyadet Comprehensive School<br>All Students Biodata portal<br> Related services Downloads <br>As from 2024</b ></p><br><br> <br>
+           <p class="formsectionA">🧑‍⚕️ Section A:<br>Student Information</p>
+          <!-- <img src="./Pdf/slip 2023/Jason james.pdf" > -->
+        
+          <ul id="list">
+            <li>Alice</li>
+            <li>Ken</li>
+          </ul>
+
+
+          <input type="search" name="" id="search" oninput="onSearch()" placeholder=" 🔍Search..Student Christian Name" class="input" onclick="(this)">
+               <div class="sections">
+            
+                       <input type="text" class="input" placeholder="👁️15" id="Entry" name="Entry" disabled>
+                   
+
+                   <div class="sub">
+                       <label for=""> ⬆️Student  Full Name </label>
+                       <input type="text" class="input" placeholder="" name="StudentFullName" disabled>
+                    </div>
+
+
+                    <div id="learnerImages" class="mypic"></div> <!-- New div for learner images -->
+                    <div class="sub">
+                        <label for="">Students Admission No </label>
+                        <input type="text"  name="Admission No" class="input"disabled>
+                        </div>
+                    <div class="sub">
+                        <label for="">Students Index No </label>
+                        <input type="text"  name="IndexNo" class="input"disabled>
+                        </div>
+
+                        
+            <div class="sub">
+                <label for="">🐏Assessment Number:💫</label>
+                <input type="text" name="Assessment Number" id="Assessment Number" class="input" disabled >
+            </div>
+
+                <div class="sub">
+                <label for=""> ⬆️Gender 💫</label>
+              <select name="Gender" id="" class="input" disabled>
+                   <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+              </select>
+
+                </div>
+            
+                <div class="sub">
+                <label for=""> 🐏 Date of Admission  </label>
+                <input type="text" class="input"  name="DateOfAdm" disabled>
+            </div>
+            
+                <div class="sub">
+                <label for=""> 🐏 Admission Class  </label>
+                <input type="text" class="input"  name="Admission Class" disabled>
+            </div>
+
+            <div class="sub">
+                <label for="">🐏Class Of:💫</label>
+                <input type="text" name="ClassOf" id="Assessment Number" class="input" disabled >
+            </div>
+
+            <div class="sub">
+                <label for="">U.P.I Number:💫</label>
+                <input type="text" name="U.P.I" id="UPI Number" class="input"  disabled >
+                </div>
+
+                
+            <div class="sub">
+                <label for=""> ⬆️Phone Number: 💫</label>
+                <input type="tel" name="Phone Number:" class="input"  disabled >
+                </div>
+                <div class="sub">
+                <label for=""> 🐏 Your Official Email:👣 </label>
+                <input type="email" name="Official Email:" id="email"  class="input" disabled >
+            </div>
+            <div class="sub">
+                <label for=""> 🐏 Class Teacher </label>
+                <select name="🐏 Class Teacher" id="" class="input"  disabled >
+                    <option value=""></option>
+                    <option value="🧑‍⚕️ Mr Oduor Geofrey Onyango">🧑‍⚕️ Mr Oduor Geofrey Onyango</option>
+                    <option value="Mr Allan Tom Onyango">Mr Allan Tom Onyango</option>
+                    
+                </select>
+                
+                </div>
+                <div class="sub">
+                    <label for=""> Phone Number:💫</label>
+                    <input type="text" name="Phone Number" id="Phone Number" class="input"  disabled  >
+                    </div>
+                    
+                    <div class="sub">
+                        <label for=""> Parent/Guardian Name:💫</label>
+                        <input type="text" name="Parent/Guardian Name" id="Assessment Number" class="input"  disabled >
+
+                    </div>
+                    
+                    <div class="sub">
+                        <label for=""> Result  slip💫</label>
+                        <input type="text" name="Resulslip" class="input"  disabled >
+                        
+                    </div>
+                    
+                     <div class="sub">
+                         <label for=""> Siblings</label>
+                         <textarea name="Siblings" class="input"  disabled ></textarea>
+                         </div>
+                </div>
+                <div class="container02">
+                    <p class="formsectionB">Section B: <br>Available Dowloads will appear here ⬇️ ;</p>
+                    <div id="fileDownload1" class="input"></div>
+                    <div id="fileDownload2" class="input"></div>
+                    <div id="fileDownload3" class="input"></div>
+                
+                </div>
+                <button id="downloadPDFButton">Download PDF</button>
+
+
+                
+                <!-- <div class="resetsendbtns">
+                    <input type="reset" value="Clear form" class="input submit">
+                    <input type="submit" value="Register" class="input submit">
+            </div> -->
+                <p class="forgotten">All rights reserved &copy;2023 <br><a href="./Pdf/2023-KCPE-Timetable-04.05.pdf">Get help</a></p>
+                <div class="or">Credence</div>
+                <div class="input btn" id="Thanks">"@Mr Oduor"</div>
+                  <!-- Table to display registered learners' data -->
+    
+            
+
+            </form>
+            
+            
+        </div>
+        
+    </div>
+   
+    <script src="PasswordOff.js"></script> 
+         <script src="app2.js"></script>
+</body>
+</html>
