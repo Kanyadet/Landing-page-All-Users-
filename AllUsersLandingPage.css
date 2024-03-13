@@ -378,6 +378,19 @@ body{
     border: 6px solid #030d20;
     
 }
+.LeftMessageicon{
+    position: fixed;
+    left: 2px;
+    bottom: 2px;
+    margin: 0;
+    font-size: 30px;
+    width: 55px;
+    padding: 0px 0px 0px 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 6px solid #030d20;
+    
+}
 
 .backtoTop:active{
 scale: 0.8;
