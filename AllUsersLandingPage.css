@@ -396,6 +396,10 @@ body{
 scale: 0.8;
 
 }
+.LeftMessageicon:active{
+scale: 0.8;
+
+}
 *{
     color: var(--main-color);
     text-decoration: none;
@@ -1227,7 +1231,8 @@ z-index: 1000;
             background-color: transparent;
            
         }#schoolemail{
-            width: ;
+            font-size: 0.8rem;
+          
         }
        
        
