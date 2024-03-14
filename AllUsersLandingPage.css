@@ -91,10 +91,19 @@ body{
 }
 
 
-#fab{
-    color: rgb(241, 236, 236);
+#fab1{
+    color: rgb(255, 18, 37);
     font-size: 20px;
 }
+#fab1:hover{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+#fab{
+    color: rgba(255, 255, 255, 0.616);
+    font-size: 20px;
+}
+
 
 #top{
     background-color: rgba(255, 255, 255, 0.187);
@@ -662,12 +671,14 @@ nav ul li a{
     font-size: 1rem;
     /* background: #ffffff9c; */
     font-weight: bold;
+    color: red;
+    box-shadow: 3px 3px 3px red;
 }
 
     nav ul li a:hover{
         background-image: url(images/logo.png);
-        color: red;
-        box-shadow: 3px 3px 3px red;
+        color: rgb(243, 243, 243);
+        box-shadow: 3px 3px 3px rgb(235, 235, 235);
         backdrop-filter: blur(10px);
         transition: 0.7s ease;
        
@@ -675,7 +686,7 @@ nav ul li a{
     }
 
     .nav-menu{
-    
+   
         right: 100px;
     }
     .hamburger{
@@ -1237,4 +1248,12 @@ z-index: 1000;
        
        
     
+}
+@media (max-width: 420px){
+    ul.nav-menu{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+       
+    }
 }
