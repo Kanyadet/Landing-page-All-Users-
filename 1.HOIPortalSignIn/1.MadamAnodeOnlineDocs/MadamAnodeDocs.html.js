@@ -31,7 +31,7 @@ const learners = {
   { Info: "Specific document Not yet selected " },
     { 
       imageUrl: "",
-      Info: "Music ", 
+      Info: "", 
       TheYear:"2024",
       Schemes: "https://docs.google.com/document/d/1BcG2GEWGOV2hKrIqszQ8R44yivKhE1H3/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
       LessonPlans: "https://docs.google.com/document/d/1Di1V9dnRg_aDBsgMaKB2D1EMb2RLGWcY/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true", 
