@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const learners = {
-  ClassEight2023: [
+  Gradeseven: [
     {Name:"learner Not yet Selected ",   
      imageUrl: "./img/schoologo.png",
     },

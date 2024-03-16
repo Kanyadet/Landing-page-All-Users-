@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exams Results</title>
+    <title>Grade 6 Results Database</title>
     <link rel="shortcut icon" href="./img/schoologo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="ExaminationResults.css" />
+    <link rel="stylesheet" href="Grade 6.css" />
     <link rel="shortcut icon" href="./img/phone.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/de1792ac5e.js"></script>
     <script
@@ -24,7 +24,7 @@
           <h3 class="title"><b>>> Welcome to Examination Office </b></h3>
           <div class="headtopstyleline" ></div>
           <p class="text">
-           <b>>></b> School Results Archive
+           <b>>></b> Online Results Archive Portal
           </p>
 
         <a href="./img/sideway.png"></a>
@@ -33,14 +33,14 @@
 
           <label for="classSelect" class="title" >Grade 6</label> 
           <select id="classSelect" onchange="displayLearners()">
-            <option value="">Select The Year </option>
+            <option value="">Select The Year</option>
             <option value="Gradeseven">The Year 2024</option>
           
             <!-- Add more classes as needed -->
           </select>
           <br> <br>
 
-          <label for="learnerSelect"  class="title" >Select The Term:</label>
+          <label for="learnerSelect"  class="title" >Student's Name:</label>
           <select id="learnerSelect" onchange="displayBiodata()"  class="btn" >
             <!-- Learner options will be populated based on the class selection -->
           </select>
@@ -92,7 +92,7 @@
 
 
           <form action="index.html" autocomplete="off">
-            <h2  id="biodata" >Learner's Biodata</h2>
+            <h2  id="biodata" >Student Specifics</h2>
             <div id="learnerBiodata" class="input">
               <!-- Biodata will be displayed here -->
             </div>
@@ -157,6 +157,6 @@
       <img src="./img/sideway.png" alt="" id="reload">
     </div>
     <!-- <script src="swal2.js"></script> -->
-    <script src="ExaminationResults.js"></script>
+    <script src="Grade 6.js"></script>
   </body>
 </html>

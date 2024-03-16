@@ -29,24 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-
-
 const learners = {
   Gradeseven: [
-    {Term:"Term ? ",   
+    {OfficialName:" Select",   
      imageUrl: "./img/schoologo.png",
     },
     { 
       imageUrl: "./img/replace.jpg",
-      Term: "Term One",
+      OfficialName: "Everlyne Awino Ouma",
       Gender: "Female", 
-      AssementNumber:"000000000",
-      UPI:"F2AJ5A",
-      Parent:"",
-      Tel:"+254729246853", 
+      AssementNumber:"xxxxxxx",
+      UPI:"xxxxxx",
+      Father:"Fredrick Ouma Omogi",
+      Tel:"xxxxxxxx", 
+      Mother:"Sarah Atieno Geng'o",
+      Tel:"0796713911", 
       SchoolChoices: "./Pdfs/SCHOOLCHOICES.pdf",
       LearnerSelections: "./Pdfs/NominallKcpe.pdf", 
       LeavingCertificate: "./Pdfs/leaving/Abeka's leaving Cert.pdf", 
@@ -56,31 +53,16 @@ const learners = {
       password: "ass",
      
       },
-      {
-      imageUrl: "./img/replace.jpg",
-      Term: "Term Two",
-      Gender: "Female", 
-      AssementNumber:"000000000",
-      UPI:"F2AJ5A",
-      Father:"SETH OTIENO ABEKA.",
-      Tel:"+254729246853", 
-      SchoolChoices: "./Pdfs/SCHOOLCHOICES.pdf",
-      LearnerSelections: "./Pdfs/NominallKcpe.pdf", 
-      LeavingCertificate: "./Pdfs/leaving/Abeka's leaving Cert.pdf", 
-      OnlineResultSlip: "./Pdfs/Slip/Abeka's Slip.pdf", 
-      Placement:"./Pdfs/Placements 2023.pdf", 
-      CallingLetter:"#",
-      password: "ass",
-    },
+     
      
      
   
     // Other learner objects without passwords
   ],
-  GradeSix: [
+  OfficialNameSix: [
     {
     imageUrl: "./img/replace.jpg",
-    Term: "2. aalBADHA LEX APONDI  ",
+    OfficialName: "2. aalBADHA LEX APONDI  ",
     Gender: "Male", 
     Academics:"Excellent", 
     AdmNo: "23/002", 
@@ -101,7 +83,7 @@ const learners = {
     CallingLetter:"#",
     password: "ass",
     },
-    { Term: "Alice Johnson", age: 16, grade: "A+", imageUrl: "url/to/image4.jpg" },
+    { OfficialName: "Alice Johnson", age: 16, grade: "A+", imageUrl: "url/to/image4.jpg" },
     // Other learner objects without passwords
   ],
   // Other classes and learners
@@ -138,10 +120,10 @@ function handleDownload(learner, fileKey) {
 
 
   // Directly initiate download without checking password
-  window.location.href = learner[fileKey];
+  window.location.href = learners[fileKey];
 
-function countLearnersInClass(classTerm) {
-  return learners[classTerm].length-1;
+function countLearnersInClass(classOfficialName) {
+  return learners[classOfficialName].length-1;
 }
 
 function displayLearners() {
@@ -152,7 +134,7 @@ function displayLearners() {
   learners[selectedClass].forEach((learner, index) => {
     const option = document.createElement("option");
     option.value = index;
-    option.textContent = learner.Term;
+    option.textContent = learner.OfficialName;
     learnerSelect.appendChild(option);
   });
    // Display number of learners registered for the selected class
@@ -175,7 +157,7 @@ function displayBiodata() {
   // Display image
   const learnerImage = document.createElement("img");
   learnerImage.src = selectedLearner.imageUrl;
-  learnerImage.alt = `${selectedLearner.Term}'s Image`;
+  learnerImage.alt = `${selectedLearner.OfficialName}'s Image`;
   biodataDiv.appendChild(learnerImage);
 
   // Display learner details
@@ -201,7 +183,7 @@ function displayBiodata() {
   if (selectedLearner.SchoolChoices) {
     const downloadLink = document.createElement("a");
     downloadLink.href = "#";
-    downloadLink.textContent = "🫂School Choices";
+    downloadLink.textContent = "🫂Term One Report";
     downloadLink.onclick = function () {
       promptForDownloadPassword(selectedLearner);
     };
@@ -212,7 +194,7 @@ function displayBiodata() {
     if (selectedLearner.LearnerSelections) {
       const downloadLink2 = document.createElement("a");
       downloadLink2.href = "#";
-      downloadLink2.textContent = "🚶‍♀️Learner Selections ";
+      downloadLink2.textContent = "🚶‍♀️Term Two Report ";
       downloadLink2.onclick = function () {
         promptForDownloadPassword(selectedLearner, "LearnerSelections");
       
@@ -223,18 +205,18 @@ function displayBiodata() {
     if (selectedLearner.LeavingCertificate) {
       const downloadLink3 = document.createElement("a");
       downloadLink3.href = "#";
-      downloadLink3.textContent = "🤼leaving Certificate";
+      downloadLink3.textContent = "Term Three Report";
       downloadLink3.onclick = function () {
-        promptForDownloadPassword(selectedLearner, "LeavingCertificate");
+        promptForDownloadPassword(selectedLearner, "Term Three Report");
       };
       biodataDiv.appendChild(downloadLink3);
     }
     if (selectedLearner.OnlineResultSlip) {
       const downloadLink4 = document.createElement("a");
       downloadLink4.href = "#";
-      downloadLink4.textContent = "👨‍⚕️Online Result Slip";
+      downloadLink4.textContent = "👨‍⚕️Class Reports";
       downloadLink4.onclick = function () {
-        promptForDownloadPassword(selectedLearner, "OnlineResultSlip");
+        promptForDownloadPassword(selectedLearner, "Class Report");
       };
       biodataDiv.appendChild(downloadLink4);
     }
