@@ -214,7 +214,7 @@ function displayBiodata() {
     if (selectedLearner.OnlineResultSlip) {
       const downloadLink4 = document.createElement("a");
       downloadLink4.href = "#";
-      downloadLink4.textContent = "👨‍⚕️Class Reports";
+      downloadLink4.textContent = "👨‍⚕️Behavioural Reports";
       downloadLink4.onclick = function () {
         promptForDownloadPassword(selectedLearner, "Class Report");
       };
