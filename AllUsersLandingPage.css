@@ -133,8 +133,8 @@ body{
     
   }
   .updates:hover{
-   border: 2px solid #ffffffc6;
-  text-decoration: underline;
+   border: 3px solid #ff0606;
+  
   
   }
   
@@ -219,7 +219,10 @@ body{
   
     -webkit-text-fill-color: transparent;
   }
-
+.new,#new{
+    color: red;
+    
+}
   
   .form2 .titlemic {
     font-weight: bold;
@@ -1067,6 +1070,11 @@ grid-column: span 4;
     padding: 4px 0;
     text-align: center;
     border-radius: 10px;
+    color: rgb(1, 2, 2);
+    background-color: #f60a0a;
+    margin: 0 auto;
+    width: 60%;
+    border-bottom-right-radius: 0;
 
 }
 .footer h3{
