@@ -4,18 +4,15 @@ const learners = {
       Title: "Select",
     },
     { 
+      Title: "APPROVAL OF PROJECT UNDER MAINTENANCE AND IMPROVEMENT FUNDS", 
+      embeddedDocURL: "https://docs.google.com/document/d/1W_JXzp9tzJn3fdDIubif3Hpo788fZaXl/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
+    },
+    { 
       Title: "KANYADET SCHOOL BOM MEETING HELD ON 5/03/24", 
-      imageUrl: "https://example.com/image1.jpg",
-      fileUrl:"https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
       embeddedDocURL: "https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
     },
     // Add more learners...
-    { 
-      Title: "KANYADET SCHOOL BOM MEETING HELD ON 5/03/24", 
-      imageUrl: "https://example.com/image1.jpg",
-      fileUrl:"https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
-      embeddedDocURL: "https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
-    },
+  
     // Add more learners...
   ],
   GradeSeven: [
@@ -46,9 +43,9 @@ function displayLearners() {
     learnerSelect.appendChild(option);
   });
 
-  const numberOfLearners = learnersInClass.length;
+  const numberOfLearners = learnersInClass.length-1;
   const countDisplay = document.getElementById("learnerCount");
-  countDisplay.textContent = `Total Documents in ${selectedClass}: ${numberOfLearners}`;
+  countDisplay.textContent = `Total Documents in : ${numberOfLearners}`;
 }
 
 function displayBiodata() {
@@ -56,7 +53,7 @@ function displayBiodata() {
   const selectedLearnerIndex = document.getElementById("learnerSelect").value;
   const selectedLearner = learners[selectedClass][selectedLearnerIndex];
 
-  let detailsHTML = `<h3>ALL YOUR EDITS ARE SYNCHRONISED TO ALL DIVICES </h3>`;
+  let detailsHTML = `<h3>ALL YOUR EDITS ARE SYNCHRONISED TO ALL DEVICES </h3>`;
   detailsHTML += `<div><img src="${selectedLearner.imageUrl}" alt="${selectedLearner.Title}'s Image" style="max-width: 100%"></div>`;
   
   // Check if the learner has an embedded document URL
