@@ -26,49 +26,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const learners = {
-  ClassEight2023: [
+  JuniorSchoolMinutesforBOM: [
     // Learner objects
     {
-      Name: "Select",
+      Title: "Select",
     },
-    { 
-      Name: "Edward Benard Abeka",
-      Gender: "Male", 
-      AdmNo: "23/001", 
-      Index: "39701064001",
-      Tel:"+254729246853", 
-      Mother:"EVELYN AKINYI ABEKA", 
-      imageUrl: "./img/abeka.jpg",
-      fileURL: "./Pdf/slip 2023/Abeka.pdf",
-      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
     
-    },
     { 
-      Name: "Amos",
-      Gender: "Male", 
-      AdmNo: "23/001", 
-      Index: "39701064001",
-      Tel:"+254729246853", 
-      Mother:"EVELYN AKINYI ABEKA", 
-      imageUrl: "./img/abeka.jpg",
-      fileURL: "./Pdf/slip 2023/Abeka.pdf",
-      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
-      fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
-      password: "ass"
+      Title: "KANYADET SCHOOL BOM MEETING HELD ON 5/03/24 ", 
+      fileURL: "https://1drv.ms/w/s!ApO7CeXy3fBY9mwgcoafK-WMySnd?e=dJY21H",
+     
     },
-    { 
-      Name: "Amos",
-      Gender: "Male", 
-      AdmNo: "23/001", 
-      Index: "39701064001",
-      Tel:"+254729246853", 
-      Mother:"EVELYN AKINYI ABEKA", 
-      imageUrl: "./img/abeka.jpg",
-      fileURL: "./Pdf/slip 2023/Abeka.pdf",
-      fileURL2: "./Pdf/slip2023/ClementJoseph.pdf", 
-      fileURL3: "./Pdf/slip2023/ClementJoseph.pdf",
-      password: "ass"
-    },
+  
+   
     // Add more learners here...
   ],
   GradeSeven: [
@@ -91,8 +61,8 @@ function handleDownload(learner, fileKey) {
   window.location.href = learner[fileKey];
 }
 
-function countLearnersInClass(className) {
-  return learners[className].length;
+function countLearnersInClass(classTitle) {
+  return learners[classTitle].length;
 }
 
 function displayLearners() {
@@ -105,42 +75,38 @@ function displayLearners() {
   learnersInClass.forEach((learner, index) => {
     const option = document.createElement("option");
     option.value = index;
-    option.textContent = learner.Name;
+    option.textContent = learner.Title;
     learnerSelect.appendChild(option);
   });
 
   // Display number of learners registered for the selected class
   const numberOfLearners = countLearnersInClass(selectedClass);
   const countDisplay = document.getElementById("learnerCount");
-  countDisplay.textContent = `Number of learners in ${selectedClass}: ${numberOfLearners}`;
+  countDisplay.textContent = `Total Documents in ${selectedClass} :  ${numberOfLearners}`;
 }
 
 function displayBiodata() {
   const selectedClass = document.getElementById("classSelect").value;
   const selectedLearnerIndex = document.getElementById("learnerSelect").value;
-  const biodataDiv = document.getElementById("learnerBiodata");
   const selectedLearner = learners[selectedClass][selectedLearnerIndex];
 
   let detailsHTML = "<div>";
   for (const [key, value] of Object.entries(selectedLearner)) {
     if (
-      key !== "imageUrl" &&
-      key !== "fileURL" &&
-      key !== "fileURL2" &&
-      key !== "fileURL3" &&
-      key !== "password"
+      key !== "fileURL" 
     ) {
-      detailsHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+      detailsHTML += `<p><strong>${key}: ${value}</strong></p>`;
     }
   }
   detailsHTML += "</div>";
 
   // Open the document in a new tab/window
-  detailsHTML += `<a href="${selectedLearner.fileURL}" target="_blank"> <strong id="strong">Open Document</strong></a>`;
+ // detailsHTML += `<a href="${selectedLearner.fileURL}" target="_blank"> <strong id="strong">Open Document</strong></a>`;
 
   Swal.fire({
-    title: `${selectedLearner.Name}'s Biodata`,
-    html: `<img src="${selectedLearner.imageUrl}" alt="${selectedLearner.Name}'s Image" style="max-width: 100%">${detailsHTML}`,
+   // title: `${selectedLearner.Title}'s Biodata`,
+    html: `<img src="${selectedLearner.imageUrl}" alt="${selectedLearner.Title}'s Image" style="max-width: 100%">${detailsHTML}
+    <iframe src="https://onedrive.live.com/embed?resid=58F0DDF2E509BB93%2115212&authkey=!AC2LXJdaWf2S6XA&em=2" width="100%" height="288" frameborder="0" scrolling="no"></iframe>`,
     showCancelButton: false,
     showConfirmButton: true,
     allowOutsideClick: true,
