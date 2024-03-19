@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HOI Docs </title>
+    <title>>> Students BioData <<</title>
     <link rel="shortcut icon" href="./img/schoologo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
@@ -17,35 +17,30 @@
   </head>
   <body>
     <div class="container">
-      <img  class="mypic" src="./img/schoologo.png" alt="" id="schoologo">
       <span class="big-circle"></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
-          <div class="imagecontainer">
-            <!-- <img  class="mypic" src="./img/me.jpg" alt="" id="profileImage"> -->
-          </div>
-          <h3 class="title"><b>Welcome Madam Anode</b></h3>
-
+          <h3 class="title"><b>>> Welcome Madam Anode </b></h3>
           <div class="headtopstyleline" ></div>
-         
+          <p class="text">
+           <b>>></b>Head of Institution  Portal
+          </p>
 
         <a href="./img/Len.jpg"></a>
         <a href="./Pdfs/leaving/Abeka's leaving Cert.pdf"></a>
         <a href="./Pdfs/Slip/Clements Slip.pdf"></a>
 
-          <label for="classSelect" class="title" >Document Category:</label> 
+          <label for="classSelect" class="title" >Documents Archive:</label> 
           <select id="classSelect" onchange="displayLearners()">
             <option value="">Select </option>
-            <option value="GradeThree">Primary Bom Meetings </option>
-            <option value="GradeFour">JS Bom Meetings</option>
-           
-            
+            <option value="ClassEight2023">J.S BOM Minutes </option>
+          
             <!-- Add more classes as needed -->
           </select>
           <br> <br>
 
-          <label for="learnerSelect"  class="title" >Availabe Documents:</label>
+          <label for="learnerSelect"  class="title" >Ref ID:</label>
           <select id="learnerSelect" onchange="displayBiodata()"  class="btn" >
             <!-- Learner options will be populated based on the class selection -->
           </select>
@@ -64,10 +59,10 @@
         
 
             <div class="information">
-              <a href="#"> <input type="submit" value="Alumni" class="btn"id="btnsforlevels" /></a>
-              <a href="#" target="_blank"><input type="submit" value="Term Three" class="btn"id="btnsforlevels"/></a>
-              <a href="https://thepauls.github.io/Professional-Documents-Sign-In/"><input type="submit" value="Log Out" class="btn"id="btnsforlevels"/></a>
-              
+              <a href="./img/phone.png"><input type="submit" value="Home" class="btn"id="btnsforlevels"/></a>
+              <a href="./Grade 5/Grade 5.html"> <input type="submit" value="Grade 4" class="btn"id="btnsforlevels" /></a>
+             <a href="./Grade 6/Grade 6.html" target="_blank"><input type="submit" value="Grade 5" class="btn"id="btnsforlevels"/></a>
+        
             </div>
           </div>
           
@@ -96,13 +91,12 @@
           <span class="circle two"></span>
 
 
-          <form action="https://formsubmit.co/68d93f35f04b0e931f4e896d19888f9c" method="POST" autocomplete="off" enctype="multipart/form-data">
-          
-            <h2  id="biodata" >Backed up Documents</h2>
+          <form action="index.html" autocomplete="off">
+            <h2  id="biodata" >Learner's Biodata</h2>
             <div id="learnerBiodata" class="input">
               <!-- Biodata will be displayed here -->
             </div>
-            <h3 class="title"  ><b>>> Feedback Center</b></h3> 
+            <h3 class="title" ><b>>> Report any Challenge </b></h3> 
             <div class="input-container">
               <label for="">Name</label>
               <span>Name</span>
@@ -121,10 +115,9 @@
               <textarea name="message" class="input"></textarea>
               <label for="" >Message</label>
               <span>Message</span>
-             <h6>Thank you for Visiting</h6>
+             <h6>Technical team will respond to your query apon submission</h6>
             </div>
             <input type="submit" value="Send" class="btn" id="send" /><br><br>
-            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
           </form>
 
             <div class="hidebigscreen">
@@ -133,9 +126,9 @@
           <div class="info">
     
             <div class="information">
-              <a href="#"> <input type="submit" value="Alumni" class="btn"id="btnsforlevels" /></a>
-              <a href="#" target="_blank"><input type="submit" value="Term Three" class="btn"id="btnsforlevels"/></a>
-              <a href="https://thepauls.github.io/Professional-Documents-Sign-In/"><input type="submit" value="Log Out" class="btn"id="btnsforlevels"/></a>
+              <a href="./img/phone.png"><input type="submit" value="Home" class="btn"id="btnsforlevels"/></a>
+              <a href="./Grade 5/Grade 5.html"> <input type="submit" value="Grade 4" class="btn"id="btnsforlevels" /></a>
+             <a href="./Grade 6/Grade 6.html" target="_blank"><input type="submit" value="Grade 5" class="btn"id="btnsforlevels"/></a>
             </div>
           </div>
           
@@ -160,10 +153,12 @@
         </div>
         </div>
       </div>
-  
-      <img src="./img/sideway.pngz" alt="" id="reload">
+  <a href="./"></a>
+      <img src="./img/sideway.png" alt="" id="reload">
     </div>
-    
-    <script src="MadamAnodeDocs.html.js"></script>
+    <script src="swal2.js">
+      
+    </script>
+    <!-- <script src="Class8.js"></script> -->
   </body>
 </html>

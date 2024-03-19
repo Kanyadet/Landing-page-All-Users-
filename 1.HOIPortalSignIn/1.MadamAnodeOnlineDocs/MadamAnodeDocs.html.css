@@ -6,23 +6,6 @@
   box-sizing: border-box;
 }
 
-.mypic{
-  position: absolute;
-  height: 50px;
-  width: 60px;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
-  animation: sunshines 4s 
-
-}
-#profileImage{
-  border-radius: 50%;
-
-}
-
-
 body,
 input,
 textarea {
@@ -30,14 +13,13 @@ textarea {
 }
 
 .swal2-popup{
-  margin-top: 90px;
+
   -webkit-box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
   6px 6px 6px rgba(255, 255, 255, 0.781);
         box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
   6px 6px 6px rgba(255, 255, 255, 0.781);
     background-color:transparent;
     background-color: #fff;
-    
    
    
  
@@ -72,7 +54,6 @@ h2#swal2-title.swal2-title{
 
 div#swal2-html-container.swal2-html-container {
   color: #352b2b;
-  
   
 }
 
@@ -120,6 +101,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     background: initial;
     backdrop-filter: blur(50px);
     color: #fff;
+    background-color: rgb(14, 7, 63);
     width: 90px;
     font-size: 1em;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -132,7 +114,8 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   }
  
   .swal2-popup.swal2-modal.swal2-show p{
-   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     text-align: left;
     border: 2px solid #fafafa;
     margin: 10px;
@@ -198,14 +181,12 @@ h6{
 
 .contact-form {
   position: relative;
-  animation: sunshines 2s 
 }
 
 .circle {
   border-radius: 50%;
   background: linear-gradient(135deg, transparent 20%, #ecebeb);
   position: absolute;
-  animation: sunshines 8s 
 }
 
 .circle.one {
@@ -240,11 +221,9 @@ form {
   z-index: 10;
   overflow: hidden;
   position: relative;
-  
-
 }
-#biodata{
- 
+
+.title,#biodata {
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
@@ -255,22 +234,6 @@ form {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: bold;
-
-  
-}
-
-.title{
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.1rem;
-  line-height: 1;
-  margin-bottom: 0.7rem;
-  background: linear-gradient(45deg,#0de5da,#5b0e43,#c2b41b,#000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: bold;
-  animation: sunshines 3s 
 }
 
 .input-container {
@@ -290,7 +253,6 @@ form {
   letter-spacing: 0.5px;
   border-radius: 25px;
   transition: 0.3s;
-  animation: sunshines 2s 
 }
 
 textarea.input {
@@ -299,9 +261,7 @@ textarea.input {
   border-radius: 22px;
   resize: none;
   overflow-y: auto;
-  animation: sunshines 3s 
 }
-
 
 .input-container label {
   position: absolute;
@@ -327,28 +287,8 @@ textarea.input {
   transform: translateY(0);
 }
 
-#classSelect {
-  animation: sunshines 2s ;
-  padding: 0.6rem 1.3rem;
-  background-color: #fff;
-  border: 6px solid #fafafa;
-  font-size: 0.95rem;
-  background: linear-gradient(45deg,#0de5da,#5b0e43,#c2b41b,#000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  border-radius: 25px;
-  outline: none;
-  cursor: pointer;
-  width: 90%;
-  transition: 0.3s;
-  margin: 2px;
-  font-weight: bold;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-}
-.btn {
-  animation: sunshines 4s ;
+.btn,#classSelect {
+ 
   padding: 0.6rem 1.3rem;
   background-color: #fff;
   border: 6px solid #fafafa;
@@ -368,7 +308,7 @@ textarea.input {
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
 }
 .headtopstyleline{
-  animation: sunshines 2s ;
+ 
   list-style: none;
   text-decoration: none;
   color: #656262;
@@ -415,7 +355,6 @@ overflow: auto;
   padding: 10px 10px 10px 10px;
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
   overflow: auto;
-  
  
 }
 
@@ -436,7 +375,6 @@ overflow: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
- 
 
  
   
@@ -482,30 +420,6 @@ overflow: auto;
 
 #learnerBiodata a{
   
-  animation: sunshines 3s ;
-  padding: 0.6rem 1.3rem;
-  background-color: #fff;
-  border: 1px solid #fafafa;
-  font-size: 0.95rem;
-  background: linear-gradient(45deg,#0de5da,#5b0e43,#c2b41b,#000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-color: rgb(61, 234, 219);
-  background-clip: text;
-  line-height: 1;
-  border-radius: 15px;
-  outline: none;
-  cursor: pointer;
-  width: 100%;
-  transition: 0.3s;
-  margin: 2px;
-  font-weight: bold;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-
-
-
-
-/* 
   list-style: none;
   font-weight: bold;
   text-decoration: none;
@@ -523,7 +437,7 @@ overflow: auto;
   border-radius: 10px;
   padding: 10px 0px 10px 10px;
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
-  animation: sunshines 2s linear */
+  animation: sunshines 2s linear
   }
 #reload{
   position: absolute;
@@ -587,14 +501,14 @@ width: 60px;
   margin-left: 0px;
 }
 .swal2-popup img{
- 
- position: fixed;
+ display: none;
+ position: absolute;
   animation: sunshines 1s ;
   border: 2px #fff solid;
   border-radius: 10px;
-  top: 1px;
-  height: 100px;
-  left: 45%;
+  top: 30px;
+  height: 80px;
+  left: 4px;
   -webkit-box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
   6px 6px 6px rgba(255, 255, 255, 0.781);
         box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
@@ -648,7 +562,6 @@ width: 60px;
 } */
 
 .input-container span {
-  animation: sunshines 3s ;
   position: absolute;
   top: 0;
   left: 25px;
@@ -721,7 +634,6 @@ width: 60px;
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
-  animation: sunshines 1s 
  
 
 }
@@ -737,7 +649,6 @@ width: 60px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: sunshines 4s 
 }
 
 .information {
@@ -746,7 +657,6 @@ width: 60px;
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
-  animation: sunshines 6s 
 
 }
 
@@ -830,8 +740,17 @@ width: 60px;
 .hidebigscreen{
   display: none;
 }
-#ProfileImagehiddeninLargescreen{
-  display: none;
+#strong{
+  margin: 2px;
+
+  background-color: #09022e;
+  color: #fff;
+  padding: 5px;
+border-radius: 0px 10px 0px 10px;
+  
+}
+a{
+  text-decoration: none;
 }
 
 @media (max-width: 1050px) {
@@ -839,15 +758,11 @@ width: 60px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
-    
    
     
   }
 }
 @media (max-width: 850px) {
-  #ProfileImagehiddenintabletMode{
-    display: none;
-  }
   .form {
     grid-template-columns: 1fr;
   }
@@ -855,11 +770,6 @@ width: 60px;
     display: block;
     padding: 2rem;
   }
-  #schoologo{
-    display: none;
-  }
-
- 
 
   .hidesmall{
     display: none;
@@ -900,6 +810,7 @@ width: 60px;
   }
   a{
     margin: 2px;
+
   }
 
   /* ////////////////////////////////////// */
@@ -964,17 +875,12 @@ width: 60px;
   {
     padding: 1.7rem 1.6rem;
     padding-top: 0px;
-    border: 2px solid lavender;
-    border-radius: 20px;
-    width: 85%;
-    margin: 5px;
 
   
   }
   .contact-info {
     padding: 1.7rem 1.6rem;
     padding-bottom: 0px;
-    width: 90%;
   
   }
 
@@ -1004,10 +910,6 @@ width: 60px;
 
   .btn {
     padding: 0.45rem 1.2rem;
-  }
-  h2#biodata{
-    font-size: 18px;
-    padding-top: 5px;
   }
 }
 
