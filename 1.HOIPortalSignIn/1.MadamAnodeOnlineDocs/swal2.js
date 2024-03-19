@@ -56,11 +56,14 @@ function displayBiodata() {
   const selectedLearnerIndex = document.getElementById("learnerSelect").value;
   const selectedLearner = learners[selectedClass][selectedLearnerIndex];
 
-  let detailsHTML = `<h2>ALL YOUR EDITS ARE SYNCHRONISED TO ALL DIVICES </h2>`;
+  let detailsHTML = `<h3>ALL YOUR EDITS ARE SYNCHRONISED TO ALL DIVICES </h3>`;
   detailsHTML += `<div><img src="${selectedLearner.imageUrl}" alt="${selectedLearner.Title}'s Image" style="max-width: 100%"></div>`;
   
   // Check if the learner has an embedded document URL
   if (selectedLearner.embeddedDocURL) {
+    // Add a link to open the embedded document above the OK button
+    detailsHTML += `<p><a href="${selectedLearner.embeddedDocURL}" target="_blank">Open Embedded Document</a></p>`;
+    
     // Use the learner's specific embedded document URL
     detailsHTML += `<iframe src="${selectedLearner.embeddedDocURL}" width="100%" height="400" frameborder="0" scrolling="no"></iframe>`;
   } else {
