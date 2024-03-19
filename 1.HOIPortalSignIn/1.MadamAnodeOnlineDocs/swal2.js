@@ -6,7 +6,15 @@ const learners = {
     { 
       Title: "KANYADET SCHOOL BOM MEETING HELD ON 5/03/24", 
       imageUrl: "https://example.com/image1.jpg",
-      embeddedDocURL: "https://onedrive.live.com/embed?resid=58F0DDF2E509BB93%2115212&authkey=!AC2LXJdaWf2S6XA&em=2",
+      fileUrl:"https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
+      embeddedDocURL: "https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
+    },
+    // Add more learners...
+    { 
+      Title: "KANYADET SCHOOL BOM MEETING HELD ON 5/03/24", 
+      imageUrl: "https://example.com/image1.jpg",
+      fileUrl:"https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
+      embeddedDocURL: "https://docs.google.com/document/d/1VZj6NOD7h2YoFFwHICcFezKlLhfM8y1t/edit?usp=sharing&ouid=110287645281482421505&rtpof=true&sd=true",
     },
     // Add more learners...
   ],
@@ -48,7 +56,7 @@ function displayBiodata() {
   const selectedLearnerIndex = document.getElementById("learnerSelect").value;
   const selectedLearner = learners[selectedClass][selectedLearnerIndex];
 
-  let detailsHTML = `<h2>${selectedLearner.Title}</h2>`;
+  let detailsHTML = `<h2>ALL YOUR EDITS ARE SYNCHRONISED TO ALL DIVICES </h2>`;
   detailsHTML += `<div><img src="${selectedLearner.imageUrl}" alt="${selectedLearner.Title}'s Image" style="max-width: 100%"></div>`;
   
   // Check if the learner has an embedded document URL
