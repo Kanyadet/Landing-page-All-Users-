@@ -1,16 +1,40 @@
 // Define default data
 const defaultData = [
   {
-    CurentGrade: "👁️Grade 3",
-    StudentFullName: "Alice",
+    ClassIndex: "👁️2 of 45",
+    StudentFullName: "Babra Akinyi",
     AdmissionNo: "23/001",
-    EntryNo: "39741064001",
+    EntryNo: "39741064001 / 098988888",
     AssessmentNumber: "Not a CBC Student",
     Gender: "Male",
     DateOfAdm:"09/0/99",
     AdmissionClass: "Class One",
     DateOfBirth:"9/9/2024",
-    Level: "Grade 3",
+    Level: "Grade 8",
+    UPI: "A00090090",
+    PhoneNumber: "254909000999",
+    StudentSchoolEmail: "Allanohn@example.com",
+    ClassTeacher: "🧑‍⚕️ Mr Oduor Geofrey Onyango",
+    ParentGuardianName: "ADARA MADoe",
+    ParentGuardianPhoneNumber: "07999958",
+    Siblings: "jane",
+    FileUrl1: "./Pdf/slip 2023/Clement's leaving Cert.pdf",
+    FileUrl2: "Result slip",
+    FileUrl3: "All collected",
+    FileUrl4: "./img/StsPic/abeka.jpg",
+
+  },
+  {
+    ClassIndex: "👁️Grade 4",
+    StudentFullName: "Amander",
+    AdmissionNo: "23/001",
+    EntryNo: "39741064001",
+    AssessmentNumber: "AB009876457",
+    Gender: "Female",
+    DateOfAdm:"09/0/99",
+    AdmissionClass: "Class One",
+    DateOfBirth:"9/9/2024",
+    Level: "Grade 4",
     UPI: "A00090090",
     PhoneNumber: "254909000999",
     StudentSchoolEmail: "Allanohn@example.com",
@@ -42,7 +66,7 @@ function disableFormFields() {
 
 // Function to populate the form with data and create download links
 function populateForm(data) {
-  document.querySelector('input[name="CurentGrade"]').value = data.CurentGrade || '';
+  document.querySelector('input[name="ClassIndex"]').value = data.ClassIndex || '';
   document.querySelector('input[name="StudentFullName"]').value = data.StudentFullName || '';
   document.querySelector('input[name="Admission No"]').value = data.AdmissionNo || '';
   document.querySelector('input[name="EntryNo"]').value = data.EntryNo || '';

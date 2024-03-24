@@ -67,7 +67,7 @@ background-size: cover;
 #search:hover{
 width: 25%;
 position: absolute;
-background-color: #040c4beb;
+background-color: #b86c08;
 top: -10px;
 right: 100px;
 }
@@ -418,15 +418,17 @@ Input[type=search]{
   display: block;
   width: 80%;
   border: none;
-  /* -webkit-box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
+  -webkit-box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
     6px 6px 6px rgba(255, 255, 255, 0.781);
           box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
-    6px 6px 6px rgba(255, 255, 255, 0.781); */
+    6px 6px 6px rgba(255, 255, 255, 0.781); 
     /* background-color: #f7f7f7; */
   outline: none;
   background-color: #ffffff42;
   /* color: rgb(161, 161, 161); */
-  color: rgb(21, 108, 142);
+  color: rgb(50, 5, 33);
+  font-family: monospace;
+  font-weight: 600;
   font-size: inherit;
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
@@ -701,7 +703,7 @@ background-clip: text;
   .mypic{
     height: 60px;
     width: 40px;
-    top: 126px;
+    top: 10px;
     left: 38px;
     transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
   }
@@ -714,9 +716,7 @@ background-clip: text;
    .title {
     text-align: right;
    }
-   body{
-background-position: center;
-   }
+ 
   
   
  

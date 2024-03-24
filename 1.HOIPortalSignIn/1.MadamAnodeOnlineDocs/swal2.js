@@ -59,7 +59,7 @@ function displayBiodata() {
   // Check if the learner has an embedded document URL
   if (selectedLearner.embeddedDocURL) {
     // Add a link to open the embedded document above the OK button
-    detailsHTML += `<p><a href="${selectedLearner.embeddedDocURL}" target="_blank">Open Embedded Document</a></p>`;
+    detailsHTML += `<p><a href="${selectedLearner.embeddedDocURL}" target="_blank">Open</a></p>`;
     
     // Use the learner's specific embedded document URL
     detailsHTML += `<iframe src="${selectedLearner.embeddedDocURL}" width="100%" height="400" frameborder="0" scrolling="no"></iframe>`;
@@ -70,7 +70,7 @@ function displayBiodata() {
 
   Swal.fire({
     html: detailsHTML,
-    showCancelButton: false,
+    showCancelButton: true,
     showConfirmButton: true,
     allowOutsideClick: true,
   });
