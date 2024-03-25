@@ -1,23 +1,23 @@
 // Define default data
 const defaultData = [
   {
-    ClassIndex: "Active",
+    ClassIndex: "2 of 58",
     StudentFullName: "JOYJESCA ABALA ATIENO",
     AdmissionNo: "001/23",
-    EntryNo: "XXXXXXXXXXXX",
+    EntryNo: "Pending Update",
     AssessmentNumber: "A000874444",
     Gender: "Female",
-    DateOfAdm:"XXXXXXXXXXXX",
-    AdmissionClass: "XXXXXXXXXXXX",
-    DateOfBirth:"XXXXXXXXXXXX",
+    DateOfAdm:"Pending Update",
+    AdmissionClass: "Pending Update",
+    DateOfBirth:"Pending Update",
     Level: "Grade 8",
     UPI: "BANX8B",
-    PhoneNumber: "XXXXXXXXXXXX",
-    StudentSchoolEmail: "XXXXXXXXXXXX",
+    PhoneNumber: "Pending Update",
+    StudentSchoolEmail: "Pending Update",
     ClassTeacher: "🧑‍⚕️ Mr Wyclife Owino",
-    ParentGuardianName: "XXXXXXXXXXXX",
-    ParentGuardianPhoneNumber: "XXXXXXXXXXXX",
-    Siblings: "XXXXXXXXXXX",
+    ParentGuardianName: "Pending Update",
+    ParentGuardianPhoneNumber: "Pending Update",
+    Siblings: "APLINE AKINYI",
     FileUrl1: "#",
     FileUrl2: "#",
     FileUrl3: "#",
@@ -25,31 +25,29 @@ const defaultData = [
 
   },
   {
-    ClassIndex: "Active",
-    StudentFullName: "AKATCH MILLICENT AKINYI",
-    AdmissionNo: "002/32",
-    EntryNo: "XXXXXXXXXX",
-    AssessmentNumber: "A000184885",
+    ClassIndex: "👁️Grade 4",
+    StudentFullName: "Amander",
+    AdmissionNo: "23/001",
+    EntryNo: "39741064001",
+    AssessmentNumber: "AB009876457",
     Gender: "Female",
-    DateOfAdm:"XXXXXXXXXX",
-    AdmissionClass: "XXXXXXXXXX",
-    DateOfBirth:"XXXXXXXXXXX",
-    Level: "Grade 8",
-    UPI: "DUZZUH0",
-    PhoneNumber: "XXXXXXXXXX",
-    StudentSchoolEmail: "XXXXXXXXXXXX",
-    ClassTeacher: "🧑‍⚕️ Mr Wyclife Owino",
-    ParentGuardianName: "XXXXXXXXXXXX",
+    DateOfAdm:"09/0/99",
+    AdmissionClass: "Class One",
+    DateOfBirth:"9/9/2024",
+    Level: "Grade 4",
+    UPI: "A00090090",
+    PhoneNumber: "254909000999",
+    StudentSchoolEmail: "Allanohn@example.com",
+    ClassTeacher: "🧑‍⚕️ Mr Oduor Geofrey Onyango",
+    ParentGuardianName: "ADARA MADoe",
     ParentGuardianPhoneNumber: "07999958",
-    Siblings: "XXXXXXXXXXX",
-    FileUrl1: "#",
-    FileUrl2: "#",
-    FileUrl3: "#",
-    FileUrl4: "#",
+    Siblings: "jane",
+    FileUrl1: "./Pdf/slip 2023/Clement's leaving Cert.pdf",
+    FileUrl2: "Result slip",
+    FileUrl3: "All collected",
+    FileUrl4: "./img/StsPic/abeka.jpg",
 
   },
-  
-  // Add more default data objects as needed
 ];
 
 // Function to disable all form fields
@@ -65,57 +63,79 @@ function disableFormFields() {
 }
 
 // Function to populate the form with data and create download links
-function populateForm(data) {
-  document.querySelector('input[name="ClassIndex"]').value = data.ClassIndex || '';
-  document.querySelector('input[name="StudentFullName"]').value = data.StudentFullName || '';
-  document.querySelector('input[name="Admission No"]').value = data.AdmissionNo || '';
-  document.querySelector('input[name="EntryNo"]').value = data.EntryNo || '';
-  document.querySelector('select[name="Gender"]').value = data.Gender || '';
-  document.querySelector('input[name="DateOfAdm"]').value = data.DateOfAdm|| '';
-  document.querySelector('input[name="DateOfBirth"]').value = data.DateOfBirth|| '';
-  document.querySelector('input[name="Admission Class"]').value = data.AdmissionClass || '';
-  document.querySelector('input[name="Level"]').value = data.Level || '';
-  document.getElementById('Assessment Number').value = data.AssessmentNumber || '';
-  document.querySelector('input[name="U.P.I"]').value = data.UPI || '';
-  document.querySelector('input[type="tel"]').value = data.PhoneNumber || '';
-  document.querySelector('input[type="email"]').value = data.StudentSchoolEmail || '';
-  document.querySelector('select[name="🐏 Class Teacher"]').value = data.ClassTeacher || '';
-  document.querySelector('input[name="Parent/Guardian Name"]').value = data.ParentGuardianName || '';
-  document.querySelector('input[name="ParentGuardianPhoneNumber"]').value = data.ParentGuardianPhoneNumber || '';
-  document.querySelector('textarea[name="Siblings"]').value = data.Siblings || '';
+function populateForm(selectedStudent) {
+  if (selectedStudent) {
+    document.querySelector('input[name="ClassIndex"]').value = selectedStudent.ClassIndex || '';
+    document.querySelector('input[name="StudentFullName"]').value = selectedStudent.StudentFullName || '';
+    document.querySelector('input[name="Admission No"]').value = selectedStudent.AdmissionNo || '';
+    document.querySelector('input[name="EntryNo"]').value = selectedStudent.EntryNo || '';
+    document.querySelector('select[name="Gender"]').value = selectedStudent.Gender || '';
+    document.querySelector('input[name="DateOfAdm"]').value = selectedStudent.DateOfAdm || '';
+    document.querySelector('input[name="DateOfBirth"]').value = selectedStudent.DateOfBirth || '';
+    document.querySelector('input[name="Admission Class"]').value = selectedStudent.AdmissionClass || '';
+    document.querySelector('input[name="Level"]').value = selectedStudent.Level || '';
+    document.getElementById('Assessment Number').value = selectedStudent.AssessmentNumber || '';
+    document.querySelector('input[name="U.P.I"]').value = selectedStudent.UPI || '';
+    document.querySelector('input[type="tel"]').value = selectedStudent.PhoneNumber || '';
+    document.querySelector('input[type="email"]').value = selectedStudent.StudentSchoolEmail || '';
+    document.querySelector('select[name="🐏 Class Teacher"]').value = selectedStudent.ClassTeacher || '';
+    document.querySelector('input[name="Parent/Guardian Name"]').value = selectedStudent.ParentGuardianName || '';
+    document.querySelector('input[name="ParentGuardianPhoneNumber"]').value = selectedStudent.ParentGuardianPhoneNumber || '';
+    document.querySelector('textarea[name="Siblings"]').value = selectedStudent.Siblings || '';
 
-  // Disable form fields after populating with data
-  disableFormFields();
+    // Disable form fields after populating with data
+    disableFormFields();
 
-  // Generate download links for PDFs
-  for (let i = 1; i <= 3; i++) {
-    const fileUrl = data[`FileUrl${i}`];
-    if (fileUrl) {
-      const link = document.createElement('a');
-      link.href = fileUrl;
-      const fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
-      link.textContent = `${fileName}`;
-      link.download = fileName;
-      document.body.appendChild(link);
+    // Generate download links for PDFs
+    for (let i = 1; i <= 3; i++) {
+      const fileUrl = selectedStudent[`FileUrl${i}`];
+      if (fileUrl) {
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        const fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+        link.textContent = `${fileName}`;
+        link.download = fileName;
+        document.body.appendChild(link);
 
-      const container = document.getElementById(`fileDownload${i}`);
-      container.innerHTML = '';
-      container.appendChild(link);
-      container.style.display = 'block';
+        const container = document.getElementById(`fileDownload${i}`);
+        container.innerHTML = '';
+        container.appendChild(link);
+        container.style.display = 'block';
+      }
     }
-  }
 
-  // Display learner images (FileUrl4)
-  const learnerImageContainer = document.getElementById('learnerImages');
-  const learnerImageUrl = data.FileUrl4;
-  if (learnerImageUrl) {
-    const img = document.createElement('img');
-    img.src = learnerImageUrl;
-    img.alt = `${data.StudentFullName}'s Image`;
-    learnerImageContainer.innerHTML = '';
-    learnerImageContainer.appendChild(img);
-    learnerImageContainer.style.display = 'block';
+    // Display learner images (FileUrl4)
+    const learnerImageContainer = document.getElementById('learnerImages');
+    const learnerImageUrl = selectedStudent.FileUrl4;
+    if (learnerImageUrl) {
+      const img = document.createElement('img');
+      img.src = learnerImageUrl;
+      img.alt = `${selectedStudent.StudentFullName}'s Image`;
+      learnerImageContainer.innerHTML = '';
+      learnerImageContainer.appendChild(img);
+      learnerImageContainer.style.display = 'block';
+    }
+  } else {
+    // Clear form fields and download links
+    clearFormFields();
   }
+}
+
+function clearFormFields() {
+  const formInputs = document.querySelectorAll('input, select, textarea');
+  formInputs.forEach(input => {
+    input.value = '';
+  });
+
+  const downloadContainers = document.querySelectorAll('[id^="fileDownload"]');
+  downloadContainers.forEach(container => {
+    container.innerHTML = '';
+    container.style.display = 'none';
+  });
+
+  const learnerImageContainer = document.getElementById('learnerImages');
+  learnerImageContainer.innerHTML = '';
+  learnerImageContainer.style.display = 'none';
 }
 
 // Function to filter data based on the first three letters of the input (e.g., name)
@@ -180,6 +200,8 @@ function generateStudentList(studentNames, title, count, prevYear = '') {
     title: `${title} (${count})`,
     html: htmlContent,
     showCancelButton: true,
+    allowOutsideClick: true, // Allow clicking outside the pop-up to close it
+    draggable: true, // Make the pop-up draggable
     didOpen: () => {
       const studentSelect = document.getElementById('studentNameSelect');
       const yearSelect = document.getElementById('yearSelect');
@@ -191,8 +213,10 @@ function generateStudentList(studentNames, title, count, prevYear = '') {
 
       studentSelect.addEventListener('change', function(event) {
         const selectedIndex = event.target.value;
-        const selectedStudent = filteredStudents[selectedIndex];
-        populateForm(selectedStudent);
+        if (selectedIndex !== '') {
+          const selectedStudent = filteredStudents[selectedIndex];
+          populateForm(selectedStudent);
+        }
       });
 
       yearSelect.addEventListener('change', function(event) {
@@ -268,5 +292,3 @@ document.addEventListener('DOMContentLoaded', function() {
   const learnerImageContainer = document.getElementById('learnerImages');
   learnerImageContainer.style.display = 'none';
 });
-
-
