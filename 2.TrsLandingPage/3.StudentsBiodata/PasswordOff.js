@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
       Swal.fire({
         icon: 'error',
         title: 'No Matching Data Found!',
-        text: 'Please refine your search by typing the first thre letters for Surname',
+        text: 'Please refine your search by typing the first three letters for Christian Name',
         timer: 5000,
         didClose: () => {
           noDataAlertShown = false;
