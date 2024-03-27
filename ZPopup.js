@@ -36,7 +36,16 @@ document.querySelectorAll("nav","close").forEach(n => n.
  
  
  //End Pop up log in for nemis 
+ 
 
+
+ window.addEventListener('load', function() {
+  const microsofthide = document.querySelector('.microsofthide');
+
+  setTimeout(function() {
+    microsofthide.style.display = 'block';
+  }, 1000); // Adjust the delay time as needed
+});
 
 
 // Log in form start
